@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Posts.all
+    @posts = Post.all
   end
 
   def show
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -29,20 +29,28 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(params[:post].permit(:title, :text))
+    if @post.update(params[:post].permit(:title, :text, :image))
       redirect_to @post
     else
       render 'edit'
     end
   end
 
+  def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to post_url, notice: 'Post was successfully removed.' }
+      format.json { head :no_content }
+    end
+  end
+
   def edit
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   private
-  def post_params
-    params.require(:post).permite(:title, :text, :image)
-  end
-  
+    def post_params
+      params.require(:post).permit(:title, :text, :image)
+    end
+
 end

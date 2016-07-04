@@ -1,0 +1,21 @@
+<%=@posts.each do |post| %>
+   <table>
+       <tr>
+           <td>
+               <h2>
+                   <%=post.title%>
+               </h2>
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <h3><%=post.text%></h3>
+           </td>
+       </tr>
+       <tr>
+           <td>
+               This Post comes under:<h4><%=post.tag%></h4>
+           </td>
+       </tr>
+   </table>
+<%end%>

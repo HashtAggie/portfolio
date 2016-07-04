@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dodygvhbs
+  api_key: '154469971647786'
+  api_secret: MJvy_nLmdHNjIwXkB5GiAKjWcVk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dodygvhbs
+  api_key: '154469971647786'
+  api_secret: MJvy_nLmdHNjIwXkB5GiAKjWcVk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dodygvhbs
+  api_key: '154469971647786'
+  api_secret: MJvy_nLmdHNjIwXkB5GiAKjWcVk
+  enhance_image_tag: true
+  static_image_support: false
