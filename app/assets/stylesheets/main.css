@@ -47,13 +47,13 @@ nav {
   height: 100%;
   overflow: auto;
   position: fixed;
-  right: -250px;
+  top: -250px;
   font-size: 15px;
-  top: 0;
+  right: 0;
   width: 250px;
   z-index: 2000;
-  text-align: left;
-  
+  text-align: center;
+
   transition: right 0.3s ease-in-out 0s;
   -webkit-transition: right 0.3s ease-in-out 0s;
   -moz-transition: right 0.3s ease-in-out 0s;
@@ -330,5 +330,3 @@ image-rendering: -webkit-optimize-contrast;
 image-rendering: optimize-contrast;
 -ms-interpolation-mode: nearest-neighbor;
 }
-
-
