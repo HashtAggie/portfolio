@@ -1,3 +1,26 @@
+<nav class="navbar navbar-fixed-top navbar-default">
+ <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicons glyphicons-bookmark"></span>
+          <span class="glyphicons glyphicons-girl"></span>
+          <span class="glyphicon glyphicon-send"></span
+       </button>
+    </div>
+  <% if !user_signed_in? %>
+  <%= link_to "Log In", new_user_session_path%>
+  <% else %>
+  <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+  <% end %>
+    <div id="navbar" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav">
+          <li><%=  link_to "About" %></li>
+          <li><%=  link_to "Contact me" %></li>
+       </ul>
+    </div>
+ </div>
+</nav>
 <p id="notice"><%= notice %></p>
 
 <div class="content">
